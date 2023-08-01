@@ -1,4 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+  background-image: url("/src/images/pictures_1920x1200_2009_Nature_Forest_silent_river_017943_.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .is-hidden {
   position: absolute;
   width: 1px;
@@ -13,28 +19,69 @@
   overflow: hidden;
 }
 
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
+.loader {
+  width: 64px;
+  height: 48px;
+  position: relative;
+  animation: split 1s ease-in infinite alternate;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+.loader::before, .loader::after {
+  content: "";
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transform: translateX(-10px);
+  background: #FF3D00;
+  opacity: 0.75;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 
-.example .background {
-  height: 240px;
-  background-image: url("../images/logo.png");
-  background-size: cover;
-  background-position: center;
+.loader::after {
+  left: auto;
+  right: 0;
+  background: #FFF;
+  transform: translateX(10px);
+}
+
+@keyframes split {
+  0%, 25% {
+    width: 64px;
+  }
+  100% {
+    width: 148px;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 8px;
+  background-color: rgba(242, 243, 240, 0.3);
+}
+
+.cat-info {
+  display: flex;
+  padding-top: 20px;
+}
+
+.cat-img {
+  margin-right: 20px;
+}
+
+.cat-breed {
+  margin: 50px 0 50px;
+}
+
+.ss-main {
+  margin: 0 auto;
+  width: 50%;
 }/*# sourceMappingURL=index.css.map */

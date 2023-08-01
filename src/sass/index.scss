@@ -1,2 +1,26 @@
 @import './common';
-@import './example';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+}
+.wrapper {
+    padding: 8px;
+    background-color: rgb(242, 243, 240, 0.3);
+}
+.cat-info {
+  display: flex;
+  padding-top: 20px;
+}
+.cat-img {
+  margin-right: 20px;
+}
+.cat-breed{
+    margin: 50px 0 50px;
+}
+.ss-main {
+  margin: 0 auto;
+  width: 50%;
+}
