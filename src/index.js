@@ -20,6 +20,7 @@ selectEl.addEventListener('change', onSelect);
 function onSelect(evt) {
 
   let breadsId = evt.target.value;
+  hidden()
 
   //get bread by id method
   fetchCatByBreed(breadsId)
@@ -54,9 +55,11 @@ function slim() {
     
 }
 
+
+
 function hidden(){
-    loaderEl.classList.add('is-hidden')
-    loaderEl.classList.remove('loader')
+    loaderEl.classList.toggle('is-hidden')
+    loaderEl.classList.toggle('loader')
 }
 // Show error notification
 function fetchError() {
