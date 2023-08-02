@@ -19,8 +19,10 @@ selectEl.addEventListener('change', onSelect);
 // Chenge select method
 function onSelect(evt) {
 
+catInfo.innerHTML = '';
+
   let breadsId = evt.target.value;
-  hidden()
+  hidden();
 
   //get bread by id method
   fetchCatByBreed(breadsId)
