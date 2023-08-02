@@ -18,34 +18,31 @@ body{
 }
 
 .loader {
-    width: 64px;
-    height: 48px;
-    position: relative;
-    animation: split 1s ease-in infinite alternate;
-  }
-  .loader::before , .loader::after {
-    content: '';
-    position: absolute;
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    transform: translateX(-10px);
-    background: #FF3D00;
-    opacity: 0.75;
-    backdrop-filter: blur(20px);
-  }
-  
-  .loader::after {
-    left: auto;
-    right: 0;
-    background: #FFF;
-    transform: translateX(10px);
-  }
-  
-  @keyframes split {
-   0% , 25%{ width: 64px }
-   100%{ width: 148px }
-  }
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin: 30px  auto;
+  position: relative;
+  border: 3px solid;
+  border-color:#de3500 #0000 #fff #0000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: 1s rotate linear infinite;
+}
+.loader:before , .loader:after{
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom-color:#fff;
+  transform: translate(-10px, 19px) rotate(-35deg);
+}
+.loader:after {
+  border-color: #de3500 #0000 #0000 #0000 ;
+  transform: translate(32px, 3px) rotate(-35deg);
+}
+ @keyframes rotate {
+  100%{    transform: rotate(360deg)}
+}
     
